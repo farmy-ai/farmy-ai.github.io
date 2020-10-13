@@ -323,7 +323,7 @@ html:not([data-scroll="0"]) .nav-bar {
           justify-content: center;
   width: calc(100% - 24px);
   min-height: calc(100vh - 72px);
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   padding-left: 12px;
   padding-right: 12px;
@@ -524,6 +524,7 @@ html:not([data-scroll="0"]) .nav-bar {
 .our-team .content-container .avatars .avatar > img {
   width: 109px;
   height: 109px;
+  border-radius: 50%;
   margin-top: 12px;
 }
 
