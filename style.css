@@ -323,7 +323,7 @@ html:not([data-scroll="0"]) .nav-bar {
           justify-content: center;
   width: calc(100% - 24px);
   min-height: calc(100vh - 72px);
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding-left: 12px;
   padding-right: 12px;
@@ -339,6 +339,10 @@ html:not([data-scroll="0"]) .nav-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   margin-bottom: auto;
   width: 100%;
 }
@@ -364,11 +368,11 @@ html:not([data-scroll="0"]) .nav-bar {
       -ms-flex-pack: center;
           justify-content: center;
   width: auto;
-  margin-left: auto;
+  margin-right: auto;
   max-width: 500px;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 900px) {
   .about-us {
     margin-top: 36px;
   }
@@ -389,7 +393,29 @@ html:not([data-scroll="0"]) .nav-bar {
   .about-us .content-container .content {
     width: 100%;
     margin-top: 28px;
-    margin-left: 0;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  .about-us .content-container .content {
+    min-width: 594px;
+  }
+  .about-us .content-container .content .title {
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-us .content-container .content .title {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+  }
+  .about-us .content-container .content .description {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
   }
 }
 
@@ -409,7 +435,7 @@ html:not([data-scroll="0"]) .nav-bar {
           justify-content: center;
   width: calc(100% - 24px);
   min-height: calc(100vh - 72px);
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding-left: 12px;
   padding-right: 12px;
@@ -451,7 +477,7 @@ html:not([data-scroll="0"]) .nav-bar {
 .our-team .content-container .content .quote {
   width: calc(100% - 12px);
   max-width: 506px;
-  margin-top: 38px;
+  margin-top: 8px;
   margin-left: 26px;
   margin-bottom: 12px;
 }
@@ -486,7 +512,7 @@ html:not([data-scroll="0"]) .nav-bar {
       -ms-flex-align: center;
           align-items: center;
   width: 174px;
-  height: 210px;
+  height: 220px;
   margin-bottom: 28px;
   margin-right: 20px;
   border-radius: 20px;
@@ -502,10 +528,12 @@ html:not([data-scroll="0"]) .nav-bar {
 }
 
 .our-team .content-container .avatars .avatar .name {
+  font-size: 16px;
   margin-top: 5px;
 }
 
 .our-team .content-container .avatars .avatar .position {
+  font-size: 16px;
   margin-top: 8px;
 }
 
@@ -554,6 +582,13 @@ html:not([data-scroll="0"]) .nav-bar {
     width: 46%;
     margin: auto;
     margin-bottom: 36px;
+  }
+  .our-team .content-container .avatars .avatar .name {
+    font-size: 13px;
+    font-weight: bolder !important;
+  }
+  .our-team .content-container .avatars .avatar .position {
+    font-size: 11px;
   }
 }
 
@@ -1143,7 +1178,7 @@ body {
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
-  line-height: 2.67;
+  line-height: 1.4;
   letter-spacing: 0.54px;
   text-align: left;
   color: #000000;
@@ -1234,7 +1269,6 @@ body {
 
 .member-name, .our-team .content-container .avatars .avatar .name {
   font-family: Poppins;
-  font-size: 16px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -1258,7 +1292,6 @@ body {
 
 .member-post, .our-team .content-container .avatars .avatar .position {
   font-family: Poppins;
-  font-size: 12px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
