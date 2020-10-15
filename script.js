@@ -109,7 +109,7 @@ $(function () {
         for (let i = 7; i < translation.length; i++) {
 
             // for contact us inputs placeholder
-            if (i === 45 || i === 38 || i === 39)
+            if (i === 46 || i === 38 || i === 39 || i === 40)
                 elements[i + 7].placeholder = translation[i];
             else
                 elements[i + 7].innerHTML = translation[i];
