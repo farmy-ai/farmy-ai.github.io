@@ -1083,10 +1083,22 @@ body {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.71;
+  line-height: 1.4;
   letter-spacing: normal;
   text-align: left;
   color: #000000;
+}
+
+.hero-description, .header .content .description {
+  font-family: Poppins;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: left;
+  color: #8b959e;
+  margin-top: 12px;
 }
 
 .how-it-work-step-title, .how-it-work .step .content .title {

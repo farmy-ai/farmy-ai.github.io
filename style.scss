@@ -259,6 +259,9 @@ html:not([data-scroll="0"]) .nav-bar {
     .title {
       @extend .hero-text;
     }
+    .description {
+      @extend .hero-description;
+    }
     .actions {
       display: flex;
 
@@ -1037,10 +1040,22 @@ body {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.71;
+  line-height: 1.4;
   letter-spacing: normal;
   text-align: left;
   color: $title;
+}
+.hero-description {
+  font-family: Poppins;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: left;
+  color: $color-of-text;
+
+  margin-top: 12px;
 }
 .how-it-work-step-title {
   font-family: Poppins;
