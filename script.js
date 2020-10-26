@@ -109,14 +109,30 @@ $(function () {
         for (let i = 7; i < translation.length; i++) {
 
             // for contact us inputs placeholder
-            if (i === 41 || i === 38 || i === 39 || i === 40)
+            if (i <= 42 && i >= 39)
                 elements[i + 7].placeholder = translation[i];
             else
                 elements[i + 7].innerHTML = translation[i];
         }
-
-
     });
+
+    document.getElementById('send').onclick = function () {
+        let formValue =
+        {
+            name: document.getElementById('name').value,
+            company: document.getElementById('company').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        }
+
+        $.post('https://api-dev.farmy.ai/api/v1/contact/', formValue)
+            .done(function () {
+                alert("second success");
+            })
+            .fail(function () {
+                alert("error");
+            })
+    }
 
     // on scroll animations
     var wow = new WOW(
