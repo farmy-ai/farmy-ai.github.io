@@ -1,113 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<title>Farmy.ai</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Farmy.ai</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="AI startup for crop and plants diseases" />
+    <meta property="og:description"
+        content="AI startup for crop advisory and monitoring for farmers, extension workers and gardeners" />
+    <meta property="og:image" content="./assets/images/icon.png" />
+    <meta property="og:image:secure_url" content="./assets/images/icon.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:title" content="Farmy.ai application" />
+    <meta property="og:type" content="website" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./manifestFiles/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./manifestFiles/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./manifestFiles/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./manifestFiles/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./manifestFiles/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./manifestFiles/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./manifestFiles/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./manifestFiles/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./manifestFiles/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./manifestFiles/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./manifestFiles/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./manifestFiles/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./manifestFiles/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#8b959e">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#8b959e">
+
+    <link rel="stylesheet" type='text/css' href="assets/lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type='text/css' href="assets/lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/lib/anime.css/animate.css" />
+
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.ar.css'>
 </head>
+
 <body>
-	
-	
-	<div class="bg-img1 overlay1 size1 flex-w flex-c-m p-t-55 p-b-55 p-l-15 p-r-15" style="background-image: url('images/bg01.jpg');">
-		<div class="wsize1">
-			<p class="txt-center p-b-23">
-				<i class="zmdi zmdi-card-giftcard cl0 fs-60"></i>
-			</p>
 
-			<h3 class="l1-txt1 txt-center p-b-22">
-				Coming Soon
-			</h3>
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+        <img class="logo" src="assets/images/logo.png" alt="">
+        <a class="link translate" data-scroll-nav="0">Home</a>
+        <a class="link translate" data-scroll-nav="1">About us</a>
+        <a class="link translate" data-scroll-nav="2">Our team</a>
+        <a style="display: none;" class=" dropdown-toggle link language" role="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FR</a>
+        <!-- language modal -->
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item translate" href="#" onclick="changeLang('ar')"></a>
+            <a class="dropdown-item translate" href="#" onclick="changeLang('en')"></a>
+            <a class="dropdown-item translate" href="#" onclick="changeLang('fr')"></a>
+        </div>
 
-			<p class="txt-center m2-txt1 p-b-67">
-				Our website is under construction, follow us for update now!
-			</p>
+        <button class="call-to-action translate" data-scroll-nav="3">Contact us</button>
+        <img src="assets/svg/menu.svg" onclick="toggleSideNav()" alt="" class="menu-button">
+    </nav>
 
-			<div class="flex-w flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1">
-				<div class="flex-col-c-m wsize2 m-b-20">
-					<span class="l1-txt2 p-b-4 days">35</span>
-					<span class="m2-txt2">Days</span>
-				</div>
+    <!-- SideNavbar -->
 
-				<span class="l1-txt2 p-b-22">:</span>
-				
-				<div class="flex-col-c-m wsize2 m-b-20">
-					<span class="l1-txt2 p-b-4 hours">17</span>
-					<span class="m2-txt2">Hours</span>
-				</div>
+    <div id="mySidenav" class="sidenav">
+        <div class="top-bar">
+            <img class="logo" src="assets/images/logo.png" alt="">
+            <img src="assets/svg/Icon ionic-ios-close.svg" onclick="toggleSideNav()" alt="" class="menu-button">
 
-				<span class="l1-txt2 p-b-22 respon2">:</span>
+        </div>
+        <a class="link first translate" data-scroll-nav="0">Home</a>
+        <a class="link translate" data-scroll-nav="1">About us</a>
+        <a class="link translate" data-scroll-nav="2">How it work</a>
+        <a style="display: none;" class=" dropdown-toggle link language" role="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FR</a>
+        <!-- language modal -->
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item translate" href="#" onclick="changeLang('ar')">Arab</a>
+            <a class="dropdown-item translate" href="#" onclick="changeLang('en')">English</a>
+            <a class="dropdown-item translate" href="#" onclick="changeLang('fr')">French</a>
+        </div>
+        <button class="call-to-action translate" data-scroll-nav="3">Contact us</button>
+    </div>
 
-				<div class="flex-col-c-m wsize2 m-b-20">
-					<span class="l1-txt2 p-b-4 minutes">50</span>
-					<span class="m2-txt2">Minutes</span>
-				</div>
+    <!-- Links -->
+    <a id="mobile_app_route" href="https://play.google.com/store/apps/details?id=ai.farmy.app" target="_blank"
+        style="display: none;"></a>
+    <a id="facebook_group" href="https://www.facebook.com/groups/farmyapp/" target="_blank" style="display: none;"></a>
 
-				<span class="l1-txt2 p-b-22">:</span>
+    <!-- HEADER -->
+    <header class="header " data-scroll-index="0">
+        <img class="background-image wow fadeIn" data-wow-duration="3s" data-wow-delay=".2s"
+            src="assets/images/header bg.svg" alt="">
+        <div class="content">
+            <div class="title translate">AI applied to make farming smart</div>
+            <div class="description translate"></div>
+            <div class="actions">
+                <button class="primary" onclick="document.getElementById('mobile_app_route').click()"><span
+                        class="translate">Download app</span> <img src="assets/images/playstore.svg" width="24px"
+                        height="24px" alt=""></button>
+                <button class="secondary translate" data-scroll-nav="1">Or learn more ></button>
+            </div>
+        </div>
+    </header>
+    <!-- Body -->
+    <section class="about-us" data-scroll-index="1">
+        <div class="title translate">About us</div>
+        <div class="content-container ">
+            <img src="assets/svg/aboutus.svg" alt="" class="illustration wow fadeInLeft" data-wow-duration="4s">
+            <div class="content wow fadeInRight" data-wow-duration="4s">
+                <div class="title translate">A leading Team On the Smart
+                    farms</div>
+                <div class="description translate">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy eirmod
+                    tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet
+                    clita kas</div>
+            </div>
+        </div>
+    </section>
 
-				<div class="flex-col-c-m wsize2 m-b-20">
-					<span class="l1-txt2 p-b-4 seconds">39</span>
-					<span class="m2-txt2">Seconds</span>
-				</div>
-			</div>	
-		</div>
-	</div>
+    <section style="display: none;" class="how-it-work">
+        <h2 class="title translate">How it work</h2>
+        <div class="step reverse">
+            <img class="illustration" src="assets/svg/feature 1.svg" alt="">
+            <div class="content wow fadeInRight" data-wow-duration="4s">
+                <div class="title translate">Take picture(s) of the infected area</div>
+                <div class="description translate">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy eirmod tempor invidunt ut labore et doloremagna aliquyam </div>
+            </div>
+        </div>
+        <div class="step ">
+            <img class="illustration" src="assets/svg/feature 2.svg" alt="">
+            <div class="content wow fadeInRight" data-wow-duration="4s">
+                <div class="title translate">Take picture(s) of the infected area</div>
+                <div class="description translate">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy
+                    eirmod
+                    tempor invidunt ut labore et dolore
+                    magna aliquyam </div>
+            </div>
+        </div>
+        <div class="step reverse">
+            <img class="illustration" src="assets/svg/feature 3.svg" alt="">
+            <div class="content wow fadeInRight" data-wow-duration="4s">
+                <div class="title translate">Take picture(s) of the infected area</div>
+                <div class="description translate">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy
+                    eirmod
+                    tempor invidunt ut labore et dolore
+                    magna aliquyam </div>
+            </div>
+        </div>
+        <div class="step ">
+            <img class="illustration" src="assets/svg/feature 4.svg" alt="">
+            <div class="content wow fadeInRight" data-wow-duration="4s">
+                <div class="title translate">Take picture(s) of the infected area</div>
+                <div class="description translate">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                    nonumy
+                    eirmod
+                    tempor invidunt ut labore et dolore
+                    magna aliquyam </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="display: none;" class="testimonial wow fadeIn">
+        <h2 class="title translate">Testimonials</h2>
+        <div class="owl-carousel">
+            <div class="card">
+                <div class="quote ">"il est la in n'est pas la , ya khoya ya khoya"</div>
+                <div class="separation"></div>
+                <div class="mkhailati">Ilies bourouh</div>
+            </div>
+            <div class="card">
+                <div class="quote">"il est la in n'est pas la , ya khoya ya khoya"</div>
+                <div class="separation"></div>
+                <div class="mkhailati">Ilies bourouh</div>
+            </div>
+            <div class="card">
+                <div class="quote">"il est la in n'est pas la , ya khoya ya khoya"</div>
+                <div class="separation"></div>
+                <div class="mkhailati">Ilies bourouh</div>
+            </div>
+            <div class="card">
+                <div class="quote">"il est la in n'est pas la , ya khoya ya khoya"</div>
+                <div class="separation"></div>
+                <div class="mkhailati">Ilies bourouh</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-team" data-scroll-index="2">
+        <h2 class="title translate">Our team</h2>
+        <div class="content-container">
+
+            <div class="content">
+                <div class="title translate">A Team of monkeys and non coders</div>
+                <div class="quote translate">" Talent wins games, but teamwork and intelligence win championships. "
+                </div>
+                <div class="writer translate">ilies bourouh</div>
+            </div>
+            <div class="avatars ">
+                <div class="avatar wow fadeIn" data-wow-duration="2s" data-wow-delay="1.5s">
+                    <img src="assets/svg/avtar1.svg" alt="">
+                    <div class="name translate">Ilies bourouh</div>
+                    <div class="position translate">Web developer</div>
+                    <div class="social-media">
+                        <img class="link" src="assets/svg/linkedin.svg" alt="">
+                    </div>
+                </div>
+                <div class="avatar wow fadeIn" data-wow-duration="2s" data-wow-delay="1.3s">
+                    <img src="assets/svg/avtar2.svg" alt="">
+                    <div class="name translate">Ilies bourouh</div>
+                    <div class="position translate">Web developer</div>
+                    <div class="social-media">
+                        <img class="link" src="assets/svg/linkedin.svg" alt="">
+                    </div>
+                </div>
+                <div class="avatar wow fadeIn" data-wow-duration="2s" data-wow-delay="1.1s">
+                    <img src="assets/svg/avtar3.svg" alt="">
+                    <div class="name translate">Ilies bourouh</div>
+                    <div class="position translate">Web developer</div>
+                    <div class="social-media">
+                        <img class="link" src="assets/svg/linkedin.svg" alt="">
+                    </div>
+                </div>
+                <div class="avatar wow fadeIn" data-wow-duration="2s" data-wow-delay="0.9s">
+                    <img src="assets/svg/avtar4.svg" alt="">
+                    <div class="name translate">Ilies bourouh</div>
+                    <div class="position translate">Web developer</div>
+                    <div class="social-media">
+                        <img class="link" src="assets/svg/linkedin.svg" alt="">
+                    </div>
+                </div>
+                <div class="avatar wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
+                    <img src="assets/svg/avtar5.svg" alt="">
+                    <div class="name translate">Ilies bourouh</div>
+                    <div class="position translate">Web developer</div>
+                    <div class="social-media">
+                        <img class="link" src="assets/svg/linkedin.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="contact-us wow fadeInLeft" data-wow-duration="2s" data-wow-delay="1s" data-scroll-index="3">
+        <h2 class="title translate">Contact Us</h2>
+        <img src="assets/svg/contact-farmy.svg" alt="" class="illustration">
+        <div class="form">
+            <input id="name" type="text" class="input full translate">
+            <input id="email" type="text" class="input full translate">
+            <input id="company" type="text" class="input full translate">
+
+            <textarea id="message" class="text-area input full translate" type="text" rows="6"></textarea>
+            <button id="send" class="send translate">Send</button>
+        </div>
+
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-media">
+            <img src="assets/svg/Icon awesome-facebook-f.svg"
+                onclick="document.getElementById('facebook_group').click()" alt="">
+            <img src="assets/svg/Icon awesome-instagram.svg" alt="">
+            <img src="assets/svg/Icon feather-twitter.svg" alt="">
+            <img src="assets/svg/Icon awesome-linkedin-in.svg" alt="">
+        </div>
+        <div class="divider"></div>
+        <span class="copyrights translate">CopyRigth 2020 Farmy.ai</span>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="assets/lib/navbar/index.js"></script>
 
 
+    <script src="assets/lib/wow.js scroll animation/wow.min.js"></script>
 
-	
-
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/moment.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-	<script>
-		$('.cd100').countdown100({
-			/*Set Endtime here*/
-			/*Endtime must be > current time*/
-			endtimeYear: 2020,
-			endtimeMonth: 8,
-			endtimeDate: 20,
-			endtimeHours: 0,
-			endtimeMinutes: 0,
-			endtimeSeconds: 0,
-			timeZone: "" 
-			// ex:  timeZone: "America/New_York"
-			//go to " http://momentjs.com/timezone/ " to get timezone
-		});
-	</script>
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+    <script src='script.js'></script>
 
 </body>
+
 </html>
