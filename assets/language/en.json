@@ -43,5 +43,7 @@
     "CUFCompany": "Your company",
     "CUFMessage": "Your message here",
     "CUFSendBtn": "Send",
-    "CopyRight": "CopyRigth 2020 Farmy.ai"
+    "CopyRight": "CopyRigth 2020 Farmy.ai",
+    "success": "Your message sent successfully !",
+    "error": "Something wrong happens !"
 }

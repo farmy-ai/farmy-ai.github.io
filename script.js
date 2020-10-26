@@ -92,10 +92,11 @@ $(function () {
     document.getElementsByClassName('language')[0].textContent = document.getElementsByClassName('language')[1].textContent = lang === 'ar' ? 'ض' : lang;
 
 
+    let translation;
     // Loading language
     $.getJSON('./assets/language/' + lang.toLocaleLowerCase() + '.json', function (res) {
 
-        let translation = Object.values(res);
+        translation = Object.values(res);
 
         console.log(translation);
 
@@ -106,7 +107,7 @@ $(function () {
             elements[i + 7].innerHTML = translation[i];
         }
 
-        for (let i = 7; i < translation.length; i++) {
+        for (let i = 7; i < translation.length - 2; i++) {
 
             // for contact us inputs placeholder
             if (i <= 42 && i >= 39)
@@ -127,10 +128,11 @@ $(function () {
 
         $.post('https://api-dev.farmy.ai/api/v1/contact/', formValue)
             .done(function () {
-                alert("second success");
+                materialAlert('Success', translation[translation.length - 2], function (e) { })
             })
             .fail(function () {
-                alert("error");
+                console.log(translation);
+                materialAlert('Error', translation[translation.length - 1], function (e) { })
             })
     }
 
