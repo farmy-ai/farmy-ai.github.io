@@ -37,7 +37,7 @@ document.addEventListener('scroll', debounce(storeScroll), { passive: true });
 // Update scroll position for first time
 storeScroll();
 
-$(function () {
+$(document).ready(function () {
 
     // let lang = localStorage.getItem('lang');
     let lang = 'en';
@@ -97,8 +97,6 @@ $(function () {
     $.getJSON('./assets/language/' + lang.toLocaleLowerCase() + '.json', function (res) {
 
         translation = Object.values(res);
-
-        console.log(translation);
 
         let elements = $('.translate');
 
@@ -200,6 +198,45 @@ $(function () {
             closeNav();
         },
     });
+
+    /* illustration animation */
+    /* 
+        setTimeout(() => {
+    
+            let satellitePath = document.getElementById('illustration').contentDocument.getElementById('satellitePath');
+            let satellite = document.getElementById('illustration').contentDocument.getElementById('satellite');
+    
+            let path = anime.path(satellitePath);
+    
+            anime({
+                targets: satellite,
+                translateX: path('x'),
+                translateY: path('y'),
+                easing: 'linear',
+                duration: 2000,
+                loop: true,
+            });
+    
+        }, 1000);
+    
+        setTimeout(() => {
+    
+            let dronePath = document.getElementById('illustration').contentDocument.getElementById('dronePath');
+            let drone = document.getElementById('illustration').contentDocument.getElementById('drone');
+    
+            let path = anime.path(dronePath);
+    
+            anime({
+                targets: drone,
+                translateX: path('x'),
+                easing: 'linear',
+                duration: 10000,
+                loop: true,
+            });
+    
+        }, 1000);
+     */
+
 });
 
 /* SideNav */

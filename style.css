@@ -237,16 +237,16 @@ html:not([data-scroll="0"]) .nav-bar {
 
 .header .background-image {
   position: absolute;
-  left: 0;
+  right: 5%;
   top: 0;
-  height: calc(100vh - 72px);
-  width: auto;
+  height: calc(80vh - 72px);
+  width: 50vw;
 }
 
 .header .content {
   position: absolute;
   top: 130px;
-  left: 28.4%;
+  left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,7 +361,7 @@ html:not([data-scroll="0"]) .nav-bar {
 }
 
 .about-us .content-container .illustration {
-  width: auto;
+  max-width: 50%;
   height: 50vh;
   max-width: 600px;
 }
@@ -889,6 +889,9 @@ html:not([data-scroll="0"]) .nav-bar {
   .contact-us .form {
     width: 100%;
     margin-top: 26px;
+  }
+  .background-image {
+    display: none;
   }
 }
 
